@@ -1,54 +1,64 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
+    <nav class="navbar is-link is-fixed-top">
       <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
-        </a>
-
-        <div class="navbar-burger">
+        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
           <span />
           <span />
           <span />
         </div>
       </div>
+
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#about">
+            <span class="icon">
+              <i class="fas fa-info" />
+            </span>
+            <span>About</span>
+          </a>
+          <a class="navbar-item" href="#services">
+            <span class="icon">
+              <i class="fas fa-bars" />
+            </span>
+            <span>Services</span>
+          </a>
+          <a class="navbar-item" href="#resume">
+            <span class="icon">
+              <i class="fas fa-file-alt" />
+            </span>
+            <span>Resume</span>
+          </a>
+          <a class="navbar-item" href="#portfolio">
+            <span class="icon">
+              <i class="fas fa-th-list" />
+            </span>
+            <span>Portfolio</span>
+          </a>
+          <a class="navbar-item" href="#contact">
+            <span class="icon">
+              <i class="fas fa-envelope" />
+            </span>
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
     </nav>
 
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <nuxt-link
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <nuxt />
-      </div>
+    <section class="main-content">
+      <nuxt />
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="section-heading">
+        <p>
+          <strong>Bulma Personal Template</strong> by <a href="https://mubaidr.js.org">Muhammad Ubaid Raza</a>. The
+          source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
